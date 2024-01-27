@@ -27,8 +27,13 @@ public class CalculadoraTest
     [InlineData(-5, -2, -3)] // a - b = -3
     public void TesteSubtrair(int a, int b, int resultadoEsperado)
     {
+        // Arrange (Preparação)
         var calculadora = new Calculadora();
+
+        // Act (Ação)
         int resultado = calculadora.Subtrair(a, b);
+
+        // Assert (Assertiva de Verificação)
         Assert.Equal(resultadoEsperado, resultado);
     }
     [Theory]
@@ -69,10 +74,10 @@ public class CalculadoraTest
     {
         // Arrange (Preparação)
         var calculadora = new Calculadora();
-        
+
         // Act (Ação)
-        Assert.Throws<ArgumentException>(() => 
-        
+        Assert.Throws<ArgumentException>(() =>
+
         // Assert (Assertiva de Verificação)
         calculadora.Dividir(10, 0));
     }
