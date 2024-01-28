@@ -1,7 +1,9 @@
 using TestesUnitarios.Desafio.Console.Services;
 
+namespace CalculadoraTests;
 
-public class CalculadoraTest
+
+public class CalculadoraTests
 {
     [Theory]
     [InlineData(2, 3, 5)] // a + b = 5
